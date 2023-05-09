@@ -4,15 +4,41 @@ using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
-    // Start is called before the first frame update
+    private int starsCollected;
+    private int lightningsCollected;
+    private int m_CurrentLevel = 1;
+
+    private static LevelManager levelManager;
+
+    public static LevelManager instance
+    {
+        get
+        {
+            if (!levelManager)
+            {
+                levelManager = FindObjectOfType(typeof(LevelManager)) as LevelManager;
+
+                if (!levelManager)
+                {
+                    Debug.LogError("There needs to be one active EventManager script on a GameObject in your scene.");
+                }
+                else
+                {
+                    DontDestroyOnLoad(levelManager);
+                }
+            }
+
+            return levelManager;
+        }
+    }
+
+
     void Start()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
+
+   
 }
