@@ -5,18 +5,20 @@ using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
-
     private static LevelManager levelManager;
 
     public Action<LevelScripts> descriptionAction;
     public Action<LevelScripts> BeginLevelAction;
     public Action<bool> EndLevelAction;
     public Action<Inventory.ItemType> CollectItemAction;
+    public Action PauseAction;
+    public Action UnPauseAction;
 
     [SerializeField] private LevelPool m_LevelList;
 
     [SerializeField] private GameObject m_DescriptionBox;
     [SerializeField] private GameObject m_InventoryBox;
+    [SerializeField] private GameObject m_PauseScreen;
 
     private Transform playerLastPosition;
     private LevelScripts m_CurrentLevel;
@@ -48,6 +50,12 @@ public class LevelManager : MonoBehaviour
         SetDescriptionBoxActive(false);
         BeginLevelAction += SetCurrentLevel;
         EndLevelAction += EndLevel;
+        PauseAction += SetPause;
+        UnPauseAction += UnPause;
+        PauseAction += SetInventoryActive;
+        UnPauseAction += SetInventoryInActive;
+        
+        m_PauseScreen.SetActive(false);
     }
 
     public void SetDescriptionBoxActive(bool _state)
@@ -58,14 +66,24 @@ public class LevelManager : MonoBehaviour
     public void BeginLevel()
     {
         SetDescriptionBoxActive(false);
-        m_InventoryBox.SetActive(false);
+        SetInventoryInActive();
     }
 
     public void EndLevel(bool _state)
     {
         m_CurrentLevel.completed = _state;
-        m_InventoryBox.SetActive(true);
+        SetInventoryActive();
         SetDescriptionBoxActive(true);
+    }
+
+    private void SetInventoryActive()
+    {
+        m_InventoryBox.SetActive(true);
+    }
+
+    private void SetInventoryInActive()
+    {
+        m_InventoryBox.SetActive(false);
     }
 
     public Transform GetPlayerLastPosition()
@@ -81,5 +99,15 @@ public class LevelManager : MonoBehaviour
     public void SetCurrentLevel(LevelScripts _level)
     {
         m_CurrentLevel = _level;
+    }
+
+    private void SetPause()
+    {
+        m_PauseScreen.SetActive(true);
+    }
+
+    private void UnPause()
+    {
+        m_PauseScreen.SetActive(false);
     }
 }

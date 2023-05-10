@@ -15,10 +15,12 @@ public class PlayerStateMachine : MonoBehaviour
     [SerializeField] public float m_lowJumpMultiplier;
     [SerializeField] public float m_MinJumpHeight;
     [SerializeField] public float m_MaxJumpHeight;
-    
+
     public Rigidbody m_RigidBody;
     public Animator m_Animator;
     public Transform m_Transform;
+
+    private bool gamePaused;
 
     public Camera m_Camera;
 
@@ -26,10 +28,11 @@ public class PlayerStateMachine : MonoBehaviour
     {
         _currentState = new Player_Idle(this);
 
+        gamePaused = false;
         m_RigidBody = GetComponent<Rigidbody>();
         m_Animator = GetComponent<Animator>();
         m_Transform = GetComponent<Transform>();
-        
+
         m_Camera = Camera.main;
 
         LevelManager.instance.BeginLevelAction += SetLevelPosition;
@@ -42,9 +45,24 @@ public class PlayerStateMachine : MonoBehaviour
     {
         _currentState = state;
     }
+
     void Update()
     {
         _currentState.UpdateExecute();
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            gamePaused = !gamePaused;
+            if (gamePaused)
+            {
+                Time.timeScale = 0;
+                LevelManager.instance.PauseAction?.Invoke();
+            }
+            else
+            {
+                Time.timeScale = 1;
+                LevelManager.instance.UnPauseAction?.Invoke();
+            }
+        }
     }
 
     private void FixedUpdate()

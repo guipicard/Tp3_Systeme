@@ -3,21 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="f1e394d4-1ed1-4193-9662-1199fb477aa0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TP3_Systeme/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TP3_Systeme/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TP3/Levels/Level1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TP3/Levels/Level1.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TP3/Levels/Level2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TP3/Levels/Level2.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TP3/Levels/Level3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TP3/Levels/Level3.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TP3/Prefabs/door_small_stone_LOD_group.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TP3/Prefabs/door_small_stone_LOD_group.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TP3/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TP3/Scenes/Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TP3/Script/CameraFollow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TP3/Script/CameraFollow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TP3/Script/Inventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TP3/Script/Inventory.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TP3/Script/LevelManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TP3/Script/LevelManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TP3/Script/LevelPool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TP3/Script/LevelPool.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TP3/Script/LevelScripts.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TP3/Script/LevelScripts.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TP3/Script/PlayerController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TP3/Script/PlayerController.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TP3/Script/PlayerStateMachine/PlayerStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TP3/Script/PlayerStateMachine/PlayerStateMachine.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TP3_Systeme.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/TP3_Systeme.sln.DotSettings.user" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +104,7 @@
       <updated>1683659168696</updated>
       <workItem from="1683659173373" duration="503000" />
       <workItem from="1683659850868" duration="375000" />
-      <workItem from="1683698827600" duration="13607000" />
+      <workItem from="1683698827600" duration="16288000" />
     </task>
     <servers />
   </component>
