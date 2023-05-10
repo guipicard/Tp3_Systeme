@@ -22,13 +22,18 @@ public class MenuControls : MonoBehaviour
         SceneManager.LoadScene("Game");
     }
 
-    public void ChargeGame()
-    {
-        
-    }
-
     public void QuitGame()
     {
         Application.Quit();
+    }
+    
+    public void SaveCurrent()
+    {
+        SaveGame.GetInstance().SaveData();
+    }
+
+    public void ChargeGame()
+    {
+        SaveGame.GetInstance().LoadGame();
     }
 }

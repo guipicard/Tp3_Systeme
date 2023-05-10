@@ -53,4 +53,9 @@ public class LevelPool : MonoBehaviour
             }
         }
     }
+
+    public List<DoorLevel> GetLevels()
+    {
+        return Levels;
+    }
 }

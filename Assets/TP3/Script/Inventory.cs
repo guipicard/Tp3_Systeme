@@ -8,6 +8,8 @@ public class Inventory : MonoBehaviour
 {
     [SerializeField] private List<Image> m_InventoryImages;
     [SerializeField] private Sprite bananaImg;
+    
+    [SerializeField] private Button m_ChargeButton;
     [SerializeField] private Button m_EndButton;
 
     public enum ItemType
@@ -16,7 +18,7 @@ public class Inventory : MonoBehaviour
         Icecube,
     }
 
-    private List<InventoryItem.Item> m_Collection;
+    public List<InventoryItem.Item> m_Collection;
 
     private int m_Capacity;
 
@@ -33,17 +35,21 @@ public class Inventory : MonoBehaviour
     {
     }
 
-    private void CreateItem(ItemType _item)
+    private void CreateItem(ItemType item)
     {
-        if (_item == ItemType.Banana)
+        if (item == ItemType.Banana)
         {
             var newItem = new InventoryItem.Item(bananaImg, "Banana");
             m_Collection.Add(newItem);
         }
     }
 
-    private void UpdateInventory(ItemType _item)
+    private void UpdateInventory(ItemType item)
     {
+        if (m_Collection.Count == 0)
+        {
+            CreateItem(item);
+        }
         for (int i = 0; i < m_Collection.Count; i++)
         {
             m_InventoryImages[i].GetComponent<Image>().color = Color.white;
