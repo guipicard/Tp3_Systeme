@@ -27,6 +27,11 @@ public class LevelPool : MonoBehaviour
     {
         foreach (var door in Levels)
         {
+            if (door.level.completed)
+            {
+                door.door.transform.Find("powerup_arrow_1").gameObject.SetActive(false);
+                continue;
+            }
             Debug.DrawRay(door.door.transform.position + Vector3.up, Vector3.back);
             if (Physics.Raycast(door.door.transform.position + Vector3.up, Vector3.back, out m_Hit))
             {
@@ -34,6 +39,11 @@ public class LevelPool : MonoBehaviour
                 {
                     LevelManager.instance.descriptionAction?.Invoke(door.level); 
                     LevelManager.instance.SetDescriptionBoxActive(true);
+                    if (Input.GetKeyDown(KeyCode.Return))
+                    {
+                        LevelManager.instance.BeginLevel();
+                        LevelManager.instance.BeginLevelAction?.Invoke(door.level);
+                    }
                     break;
                 }
             }
