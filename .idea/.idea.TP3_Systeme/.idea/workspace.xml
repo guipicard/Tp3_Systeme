@@ -4,9 +4,21 @@
     <list default="true" id="f1e394d4-1ed1-4193-9662-1199fb477aa0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TP3_Systeme/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TP3_Systeme/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RPGTinyHeroWavePBR/Animation/DoubleSword/Idle_Normal_DoubleSword.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RPGTinyHeroWavePBR/Animation/DoubleSword/Idle_Normal_DoubleSword.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RPGTinyHeroWavePBR/Animation/DoubleSword/InPlace/JumpAir_InPlace_DoubleSword.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RPGTinyHeroWavePBR/Animation/DoubleSword/InPlace/JumpAir_InPlace_DoubleSword.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RPGTinyHeroWavePBR/Animation/DoubleSword/InPlace/JumpEnd_InPlace_DoubleSword.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RPGTinyHeroWavePBR/Animation/DoubleSword/InPlace/JumpEnd_InPlace_DoubleSword.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RPGTinyHeroWavePBR/Animation/DoubleSword/InPlace/JumpStart_InPlace_DoubleSword.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RPGTinyHeroWavePBR/Animation/DoubleSword/InPlace/JumpStart_InPlace_DoubleSword.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RPGTinyHeroWavePBR/Animation/DoubleSword/InPlace/MoveFWD_Battle_InPlace_DoubleSword.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RPGTinyHeroWavePBR/Animation/DoubleSword/InPlace/MoveFWD_Battle_InPlace_DoubleSword.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TP3/Prefabs/Player/Animations/PlayerAnims/PlayerController.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TP3/Prefabs/Player/Animations/PlayerAnims/PlayerController.controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TP3/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TP3/Scenes/Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TP3/Script/LevelManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TP3/Script/LevelManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TP3/Script/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TP3/Script/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TP3/Script/PlayerStateManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TP3/Script/PlayerStateManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +32,10 @@
     <setting file="mock://C:/Users/guill/Desktop/School/Session2/Systeme de jeu/TP3_Systeme/Assets/TP3/Scenes/MainMenu.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/guill/Desktop/School/Session2/Systeme de jeu/TP3_Systeme/Assets/TP3/Script/MenuControls.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/guill/Desktop/School/Session2/Systeme de jeu/TP3_Systeme/Assets/TP3/Script/MenuControls.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/TP3/Script/PlayerStateMachine/PlayerState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/TP3/Script/PlayerStateMachine/PlayerStateMachine.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/TP3/Script/PlayerStateMachine/Player_Idle.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/TP3/Script/PlayerStateMachine/Player_Jumping.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -78,10 +94,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="36152">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="36152" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />

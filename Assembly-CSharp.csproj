@@ -57,9 +57,14 @@
      <Compile Include="Assets\TP3\Script\AudioManager.cs" />
      <Compile Include="Assets\TP3\Script\PlayerController.cs" />
      <Compile Include="Assets\TP3\Script\GameStateManager.cs" />
-     <Compile Include="Assets\TP3\Script\PlayerStateManager.cs" />
+     <Compile Include="Assets\TP3\Script\PlayerStateMachine\PlayerStateMachine.cs" />
      <Compile Include="Assets\TP3\Script\MenuControls.cs" />
      <Compile Include="Assets\TP3\Script\CameraFollow.cs" />
+     <Compile Include="Assets\TP3\Script\PlayerStateMachine\PlayerState.cs" />
+     <Compile Include="Assets\TP3\Script\PlayerStateMachine\Player_Idle.cs" />
+     <Compile Include="Assets\TP3\Script\PlayerStateMachine\Player_Moving.cs" />
+     <Compile Include="Assets\TP3\Script\PlayerStateMachine\Player_Jumping.cs" />
+     <Compile Include="Assets\TP3\Script\PlayerStateMachine\Player_Falling.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

@@ -8268,7 +8268,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6452875723513388645, guid: 64b8f497261c35a4b89cc5dc3fe597c8, type: 3}
   m_PrefabInstance: {fileID: 1341243677}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1341243680
+--- !u!114 &1341243684
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8280,6 +8280,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0717ed183cd81734cbdbbb3bf9539370, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Speed: 5
+  m_RotationSpeed: 5
+  m_JumpForce: 10
+  m_FallMultiplier: 5
+  m_lowJumpMultiplier: 10
+  m_MinJumpHeight: 1.5
+  m_MaxJumpHeight: 2.1
 --- !u!1001 &1406573183
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11355,7 +11362,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Player: {fileID: 1341243679}
-  m_Offset: {x: 10, y: 10, z: -10}
+  m_Offset: {x: 5, y: -7, z: 5}
 --- !u!1 &1979523604
 GameObject:
   m_ObjectHideFlags: 0
