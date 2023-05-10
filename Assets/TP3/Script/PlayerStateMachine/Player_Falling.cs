@@ -19,17 +19,16 @@ public class Player_Falling : PlayerState
     public override void FixedUpdateExecute()
     {
         m_CurrentVelocity = m_RigidBody.velocity;
-        m_CurrentRotation = m_RigidBody.rotation;
+        m_CurrentRotation = m_Transform.rotation;
 
 
         Move();
-        m_CurrentRotation = Rotate();
-        
+        if (m_Direction != Vector3.zero) m_Transform.rotation = Rotate();
+
         Vector3 fallMultiplier = Vector3.up * Physics.gravity.y * (m_FallMultiplier - 1) * Time.deltaTime;
         m_CurrentVelocity += fallMultiplier;
         
         m_RigidBody.velocity = m_CurrentVelocity;
-        m_Transform.rotation = m_CurrentRotation;
 
         
         

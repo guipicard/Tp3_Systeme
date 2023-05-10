@@ -1,14 +1,18 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
-    private int starsCollected;
-    private int lightningsCollected;
-    private int m_CurrentLevel = 1;
 
     private static LevelManager levelManager;
+
+    public Action<LevelScripts> descriptionAction;
+
+    [SerializeField] private LevelPool m_LevelList;
+
+    [SerializeField] private GameObject m_DescriptionBox;
 
     public static LevelManager instance
     {
@@ -32,13 +36,13 @@ public class LevelManager : MonoBehaviour
         }
     }
 
-
-    void Start()
+    private void Start()
     {
-        
+        SetDescriptionBoxActive(false);
     }
 
-
-
-   
+    public void SetDescriptionBoxActive(bool _state)
+    {
+        m_DescriptionBox.SetActive(_state);
+    }
 }

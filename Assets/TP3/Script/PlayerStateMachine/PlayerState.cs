@@ -28,7 +28,6 @@ public abstract class PlayerState
     protected UnityEngine.Ray m_GroundRay;
 
     protected UnityEngine.RaycastHit m_GroundHit;
-    public bool m_Ground;
 
     private UnityEngine.Quaternion targetRotation;
 
@@ -42,7 +41,6 @@ public abstract class PlayerState
         LoadComponents(stateMachine);
 
         m_GroundRay = new Ray();
-        m_Ground = true;
         
 
         m_Direction = UnityEngine.Vector3.zero;
@@ -81,26 +79,26 @@ public abstract class PlayerState
 
         if (Input.GetKey(KeyCode.W)) // Vector3(1, 0, 1)
         {
-            horizontal += 1;
+            // horizontal += 1;
             vertical += 1;
         }
 
         if (Input.GetKey(KeyCode.A)) // Vector3(-1, 0, 1)
         {
             horizontal -= 1;
-            vertical += 1;
+            // vertical += 1;
         }
 
         if (Input.GetKey(KeyCode.S)) // Vector3(-1, 0, -1)
         {
-            horizontal -= 1;
+            // horizontal -= 1;
             vertical -= 1;
         }
 
         if (Input.GetKey(KeyCode.D)) // Vector3(1, 0, -1)
         {
             horizontal += 1;
-            vertical -= 1;
+            // vertical -= 1;
         }
 
         return new UnityEngine.Vector3(horizontal, 0, vertical).normalized;
@@ -123,7 +121,7 @@ public abstract class PlayerState
                 Time.fixedDeltaTime * m_RotationSpeed);
         }
 
-        return targetRotation;
+        return m_Transform.rotation;
     }
 
     protected bool IsGrounded()

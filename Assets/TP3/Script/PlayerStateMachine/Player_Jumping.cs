@@ -26,15 +26,15 @@ public class Player_Jumping : PlayerState
     public override void FixedUpdateExecute()
     {
         m_CurrentVelocity = m_RigidBody.velocity;
-        m_CurrentRotation = m_RigidBody.rotation;
+        m_CurrentRotation = m_Transform.rotation;
 
 
         Move();
-        m_CurrentRotation = Rotate();
+        
 
         JumpMultiplier();
         m_RigidBody.velocity = m_CurrentVelocity;
-        m_Transform.rotation = m_CurrentRotation;
+        if (m_Direction != Vector3.zero) m_Transform.rotation = Rotate();
     }
 
     private void JumpMultiplier()

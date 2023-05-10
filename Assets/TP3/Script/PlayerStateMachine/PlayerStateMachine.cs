@@ -30,7 +30,6 @@ public class PlayerStateMachine : MonoBehaviour
 
     public void SetState(PlayerState state)
     {
-        Debug.Log($"{state}");
         _currentState = state;
     }
     

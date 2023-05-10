@@ -31,15 +31,14 @@ public class Player_Moving : PlayerState
             m_Animator.SetBool("Running", true);
         }
         m_CurrentVelocity = m_RigidBody.velocity;
-        m_CurrentRotation = m_RigidBody.rotation;
         // IsGrounded();
 
         Move();
-        m_CurrentRotation = Rotate();
+        
 
         // JumpMultiplier();
         m_RigidBody.velocity = m_CurrentVelocity;
-        m_Transform.rotation = m_CurrentRotation;
+        m_Transform.rotation = Rotate();
         // Animate();
         
         if (!IsGrounded())
