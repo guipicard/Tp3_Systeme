@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using TP3.Script;
 using UnityEngine;
 
 public class DescriptiveBox : MonoBehaviour
@@ -10,7 +11,7 @@ public class DescriptiveBox : MonoBehaviour
     
     void Start()
     {
-        LevelManager.instance.descriptionAction += SetDescription;
+        LevelManager.descriptionAction += SetDescription;
     }
 
     // Update is called once per frame

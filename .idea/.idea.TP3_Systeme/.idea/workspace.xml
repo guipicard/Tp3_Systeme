@@ -3,9 +3,38 @@
   <component name="ChangeListManager">
     <list default="true" id="f1e394d4-1ed1-4193-9662-1199fb477aa0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TP3_Systeme/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TP3_Systeme/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assembly-CSharp-Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp-Editor.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RPGTinyHeroWavePBR/Animation/DoubleSword/Victory_DoubleSword.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RPGTinyHeroWavePBR/Animation/DoubleSword/Victory_DoubleSword.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TP3/Levels/Level1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TP3/Levels/Level1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TP3/Levels/Level2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TP3/Levels/Level2.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TP3/Levels/Level3.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TP3/Levels/Level3.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TP3/Prefabs/Player/Animations/PlayerAnims/PlayerController.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TP3/Prefabs/Player/Animations/PlayerAnims/PlayerController.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TP3/Prefabs/Player/Animations/PlayerAnims/Used/MoveFWD_Battle_InPlace_DoubleSword.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TP3/Prefabs/Player/Animations/PlayerAnims/Used/MoveFWD_Battle_InPlace_DoubleSword.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TP3/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TP3/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TP3/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TP3/Scenes/MainMenu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TP3/Script/AudioManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TP3/Script/AudioManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TP3/Script/AudioPool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TP3/Script/AudioPool.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TP3/Script/CameraFollow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TP3/Script/CameraFollow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TP3/Script/DescriptiveBox.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TP3/Script/DescriptiveBox.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TP3/Script/Inventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TP3/Script/Inventory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TP3/Script/InventoryItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TP3/Script/InventoryItem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TP3/Script/LevelManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TP3/Script/LevelManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TP3/Script/LevelPool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TP3/Script/LevelPool.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TP3/Script/MenuControls.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TP3/Script/MenuControls.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TP3/Script/PlayerStateMachine/PlayerState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TP3/Script/PlayerStateMachine/PlayerState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TP3/Script/PlayerStateMachine/PlayerStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TP3/Script/PlayerStateMachine/PlayerStateMachine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TP3/Script/PlayerStateMachine/Player_Falling.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TP3/Script/PlayerStateMachine/Player_Falling.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TP3/Script/PlayerStateMachine/Player_Idle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TP3/Script/PlayerStateMachine/Player_Idle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TP3/Script/PlayerStateMachine/Player_Jumping.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TP3/Script/PlayerStateMachine/Player_Jumping.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TP3/Script/PlayerStateMachine/Player_Moving.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TP3/Script/PlayerStateMachine/Player_Moving.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TP3/Script/PlayerStateMachine/Player_Tree.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TP3/Script/PlayerStateMachine/Player_Tree.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TP3/Script/SaveGame.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TP3/Script/SaveGame.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TP3/Sprite/Banana.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TP3/Sprite/Banana.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP3_Systeme.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/TP3_Systeme.sln.DotSettings.user" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,7 +53,10 @@
     <setting file="file://$PROJECT_DIR$/Assets/TP3/Script/PlayerStateMachine/PlayerStateMachine.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/TP3/Script/PlayerStateMachine/Player_Idle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/TP3/Script/PlayerStateMachine/Player_Jumping.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/TP3/Script/PlayerStateMachine/Player_PowerUps.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/TP3/Script/PlayerStateMachine/Player_Tree.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/TP3/Script/PowerUpsAnims.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/UIBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -83,10 +115,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="10268">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="10268" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -104,7 +136,10 @@
       <updated>1683659168696</updated>
       <workItem from="1683659173373" duration="503000" />
       <workItem from="1683659850868" duration="375000" />
-      <workItem from="1683698827600" duration="16288000" />
+      <workItem from="1683698827600" duration="18756000" />
+      <workItem from="1683856334541" duration="37839000" />
+      <workItem from="1683934794408" duration="2167000" />
+      <workItem from="1683937011311" duration="7724000" />
     </task>
     <servers />
   </component>

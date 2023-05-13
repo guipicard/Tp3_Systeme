@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
+using TP3.Script.PlayerStateMachine;
 using UnityEngine;
+using UnityEngine.UI;
 using Vector3 = System.Numerics.Vector3;
 
 public abstract class PlayerState
@@ -14,6 +17,7 @@ public abstract class PlayerState
     protected float m_lowJumpMultiplier;
     protected float m_MinJumpHeight;
     protected float m_MaxJumpHeight;
+    protected List<GameObject> m_PowerUps;
 
     protected float JumpedFromPositionY;
 
@@ -34,6 +38,11 @@ public abstract class PlayerState
 
 
     public PlayerState(PlayerStateMachine stateMachine)
+    {
+        Init(stateMachine);
+    }
+    
+    private void Init(PlayerStateMachine stateMachine)
     {
         _StateMachine = stateMachine;
 
@@ -62,6 +71,7 @@ public abstract class PlayerState
         m_lowJumpMultiplier = stateMachine.m_lowJumpMultiplier;
         m_MinJumpHeight = stateMachine.m_MinJumpHeight;
         m_MaxJumpHeight = stateMachine.m_MaxJumpHeight;
+        m_PowerUps = stateMachine.m_PowerUps;
     }
 
     private void LoadComponents(PlayerStateMachine stateMachine)
@@ -73,32 +83,27 @@ public abstract class PlayerState
 
     public UnityEngine.Vector3 GetDirection()
     {
-        // floats instead of vector3 to simplify the code, each inputs key adds its direction to a vector3.zero
         float horizontal = 0f;
         float vertical = 0f;
 
-        if (Input.GetKey(KeyCode.W)) // Vector3(1, 0, 1)
+        if (Input.GetKey(KeyCode.W))
         {
-            // horizontal += 1;
             vertical += 1;
         }
 
-        if (Input.GetKey(KeyCode.A)) // Vector3(-1, 0, 1)
+        if (Input.GetKey(KeyCode.A))
         {
             horizontal -= 1;
-            // vertical += 1;
         }
 
-        if (Input.GetKey(KeyCode.S)) // Vector3(-1, 0, -1)
+        if (Input.GetKey(KeyCode.S))
         {
-            // horizontal -= 1;
             vertical -= 1;
         }
 
-        if (Input.GetKey(KeyCode.D)) // Vector3(1, 0, -1)
+        if (Input.GetKey(KeyCode.D)) 
         {
             horizontal += 1;
-            // vertical -= 1;
         }
 
         return new UnityEngine.Vector3(horizontal, 0, vertical).normalized;
@@ -116,7 +121,6 @@ public abstract class PlayerState
 
         if (m_Transform.rotation != targetRotation)
         {
-            // Slerp looks smoother than Lerp
             return UnityEngine.Quaternion.Slerp(m_Transform.rotation, targetRotation,
                 Time.fixedDeltaTime * m_RotationSpeed);
         }

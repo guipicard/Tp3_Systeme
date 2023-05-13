@@ -9,7 +9,7 @@ namespace TP3.Script.PlayerStateMachine
         private Camera m_MainCamera = Camera.main;
         private int tries;
 
-        public Player_Tree(global::PlayerStateMachine stateMachine) : base(stateMachine)
+        public Player_Tree(PlayerStateMachine stateMachine) : base(stateMachine)
         {
             tries = 0;
         }
@@ -24,19 +24,20 @@ namespace TP3.Script.PlayerStateMachine
                     GameObject target = m_HitInfo.collider.gameObject;
                     if (target.layer == 8 && !target.GetComponent<CapsuleCollider>().isTrigger)
                     {
+                        m_Transform.LookAt(m_HitInfo.collider.transform.position);
                         target.GetComponent<CapsuleCollider>().isTrigger = true;
                         if (Random.Range(0, 6 - tries) == 1)
                         {
                             ResetBananaTrees();
-                            Debug.Log("win");
                             // WIn
-                            LevelManager.instance.CollectItemAction?.Invoke(Inventory.ItemType.Banana);
-                            LevelManager.instance.EndLevelAction?.Invoke(true);
+                            LevelManager.CollectItemAction?.Invoke(Inventory.ItemType.Banana);
+                            LevelManager.EndLevelAction?.Invoke(true);
+                            SaveGame.GetInstance().SaveData();
                             _StateMachine.SetState(new Player_Jumping(_StateMachine));
                         }
                         else
                         {
-                            Debug.Log("Nope");
+                            AudioManager.instance.PlaySound(SoundClip.WrongTree, 1.0f);
                             tries++;
                         }
                     }
@@ -47,8 +48,7 @@ namespace TP3.Script.PlayerStateMachine
             {
                 // Lose
                 ResetBananaTrees();
-                Debug.Log("Lose");
-                LevelManager.instance.EndLevelAction?.Invoke(false);
+                LevelManager.EndLevelAction?.Invoke(false);
                 _StateMachine.SetState(new Player_Idle(_StateMachine));
             }
         }

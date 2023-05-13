@@ -1,71 +1,126 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
+using TP3.Script;
 using UnityEngine;
 using UnityEngine.UI;
 
+
+public struct Item
+{
+    public readonly Sprite m_Image;
+    public Inventory.ItemType type;
+
+    public Item(Sprite _image, Inventory.ItemType _type)
+    {
+        m_Image = _image;
+        type = _type;
+    }
+}
+
+
 public class Inventory : MonoBehaviour
 {
-    [SerializeField] private List<Image> m_InventoryImages;
+    private List<Image> m_InventoryImages;
     [SerializeField] private Sprite bananaImg;
-    
-    [SerializeField] private Button m_ChargeButton;
-    [SerializeField] private Button m_EndButton;
+    [SerializeField] private Sprite lightningImg;
 
     public enum ItemType
     {
         Banana,
-        Icecube,
+        Lightning,
     }
 
-    public List<InventoryItem.Item> m_Collection;
 
     private int m_Capacity;
 
+    private void Awake()
+    {
+        LevelManager.SubscribeGameAction += SubscribeAll;
+        LevelManager.DisableGameAction += UnsubsribeAll;
+    }
+
     void Start()
     {
-        m_Collection = new List<InventoryItem.Item>();
-        m_Capacity = 8;
-        LevelManager.instance.CollectItemAction += CreateItem;
-        LevelManager.instance.CollectItemAction += UpdateInventory;
-        LevelManager.instance.PauseAction += CanEndGame;
+        m_InventoryImages = new List<Image>();
+
+        LevelManager.m_DescriptionBox = GameObject.Find("DescriptiveBox");
+        LevelManager.m_InventoryBox = GameObject.Find("Inventory");
+        LevelManager.m_PauseScreen = GameObject.Find("PauseScreen");
+        LevelManager.m_EndButton = GameObject.Find("EndButton");
+        LevelManager.m_EndButton.GetComponent<Button>().enabled = false;
+        var imgList = GameObject.FindGameObjectsWithTag("ItemSlot");
+        foreach (var image in imgList)
+        {
+            m_InventoryImages.Add(image.GetComponent<Image>());
+        }
+        
+        LevelManager.SubscribeAll();
+        LevelManager.Init();
     }
 
     void Update()
     {
     }
 
-    private void CreateItem(ItemType item)
+    private void Init()
+    {
+    }
+
+    private void SubscribeAll()
+    {
+        LevelManager.CollectItemAction += CreateItem;
+        LevelManager.CollectItemAction += UpdateInventory;
+    }
+
+    private void UnsubsribeAll()
+    {
+        LevelManager.CollectItemAction -= CreateItem;
+        LevelManager.CollectItemAction -= UpdateInventory;
+    }
+
+    public void CreateItem(ItemType item)
     {
         if (item == ItemType.Banana)
         {
-            var newItem = new InventoryItem.Item(bananaImg, "Banana");
-            m_Collection.Add(newItem);
+            var newItem = new Item(bananaImg, ItemType.Banana);
+            LevelManager.m_Collection.Add(newItem);
         }
+
+        if (item == ItemType.Lightning)
+        {
+            var newItem = new Item(lightningImg, ItemType.Lightning);
+            LevelManager.m_Collection.Add(newItem);
+        }
+
+        CanEndGame();
     }
 
     private void UpdateInventory(ItemType item)
     {
-        if (m_Collection.Count == 0)
+        if (LevelManager.m_Collection.Count == 0) return;
+        if (m_InventoryImages.Count == 0)
         {
-            CreateItem(item);
+            foreach (var image in GameObject.FindGameObjectsWithTag("ItemSlot"))
+            {
+                m_InventoryImages.Add(image.GetComponent<Image>());
+            }
         }
-        for (int i = 0; i < m_Collection.Count; i++)
+        for (int i = 0; i < LevelManager.m_Collection.Count; i++)
         {
-            m_InventoryImages[i].GetComponent<Image>().color = Color.white;
-            m_InventoryImages[i].GetComponent<Image>().sprite = m_Collection[i].m_Image;
+            m_InventoryImages[i].color = Color.white;
+            m_InventoryImages[i].sprite = LevelManager.m_Collection[i].m_Image;
         }
     }
 
     private void CanEndGame()
     {
-        if (m_Collection.Count == 8)
+        if (LevelManager.m_Collection.Count == 8)
         {
-            m_EndButton.enabled = true;
-        }
-        else
-        {
-            m_EndButton.enabled = false;
+            if (!LevelManager.GetGameWon()) AudioManager.instance.PlaySound(SoundClip.Win, 1.0f);
+            LevelManager.m_EndButton.GetComponent<Button>().enabled = true;
+            LevelManager.SetGameWon(true);
         }
     }
 }

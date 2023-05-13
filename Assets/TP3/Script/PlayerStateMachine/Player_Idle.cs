@@ -1,12 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using TP3.Script.PlayerStateMachine;
 using UnityEngine;
 using Vector3 = System.Numerics.Vector3;
 
 public class Player_Idle : PlayerState
 {
-    // private UnityEngine.Vector3 m_Direction;
-
     public Player_Idle(PlayerStateMachine stateMachine) : base(stateMachine)
     {
     }

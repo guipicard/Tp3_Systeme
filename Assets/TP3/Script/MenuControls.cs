@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TP3.Script;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,17 +9,16 @@ public class MenuControls : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
     }
 
     public void PlayGame()
     {
+        LevelManager.Save = null;
         SceneManager.LoadScene("Game");
     }
 
@@ -26,14 +26,22 @@ public class MenuControls : MonoBehaviour
     {
         Application.Quit();
     }
-    
-    public void SaveCurrent()
+
+    public void LeaveGame()
     {
-        SaveGame.GetInstance().SaveData();
+        LevelManager.UnsubsribeAll();
+        SceneManager.LoadScene("MainMenu");
     }
 
     public void ChargeGame()
     {
-        SaveGame.GetInstance().LoadGame();
+        LevelManager.LoadGame();
+        SceneManager.LoadScene("Game");
+    }
+
+    public void ChargeSave()
+    {
+        LevelManager.LoadGame();
+        LevelManager.ChargeGame();
     }
 }

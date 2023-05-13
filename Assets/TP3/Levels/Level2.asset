@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d80679b4a232f9445bce7f20ab120be6, type: 3}
   m_Name: Level2
   m_EditorClassIdentifier: 
-  levelName: Second Level
-  description: Complete The Second Mission
-  completed: 0
-  item: {fileID: 0}
+  levelName: Lightning Struck
+  description: Collect all the lighnings in 10 seconds
+  completed: 1
+  cameraFocus: {x: 18.731224, y: 0.5, z: -8.761807}
+  cameraOffset: {x: 0, y: -3, z: 7}
+  PlayerBeginPosition: {x: 17.03, y: 0.5, z: 5.84}

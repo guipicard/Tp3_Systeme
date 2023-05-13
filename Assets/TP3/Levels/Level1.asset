@@ -13,9 +13,8 @@ MonoBehaviour:
   m_Name: Level1
   m_EditorClassIdentifier: 
   levelName: Collect The Banana
-  description: Find which tree hides the banana in less than 2 guesses.
-  completed: 0
-  item: {fileID: 0}
+  description: Find which tree hides the banana in less than 3 guesses.
+  completed: 1
   cameraFocus: {x: 2.7, y: -5.018534, z: -8.9}
   cameraOffset: {x: 0, y: -3, z: 7}
   PlayerBeginPosition: {x: 4.15, y: 0.5, z: -11}

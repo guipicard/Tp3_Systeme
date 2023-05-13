@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TP3.Script;
 using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
@@ -17,9 +18,9 @@ public class CameraFollow : MonoBehaviour
         FollowPosition = m_Player.position;
         FollowObjectPosition = Vector3.zero;
         m_PosY = 0;
-        LevelManager.instance.BeginLevelAction += SetCameraFollow;
+        LevelManager.BeginLevelAction += SetCameraFollow;
 
-        LevelManager.instance.EndLevelAction += ResetCameraFollow;
+        LevelManager.EndLevelAction += ResetCameraFollow;
     }
 
     // Update is called once per frame
